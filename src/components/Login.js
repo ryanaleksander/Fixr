@@ -1,11 +1,8 @@
 import React from 'react';
 import { View, Card, Icon, Container, Content, Text, Form, Input, InputGroup, Label, H1, Row, Col, Grid, Item, Button, CardItem, Body } from 'native-base';
+import { Actions } from 'react-native-router-flux';
 
 export default class Login extends React.Component {
-  componentWillMount() {
-
-  }
-
   render() {
     return (
       <Container style={{backgroundColor: '#BBDEFB'}}>
@@ -22,7 +19,7 @@ export default class Login extends React.Component {
                   <Label>Mật khẩu</Label>
                   <Input secureTextEntry={true}/>
                 </Item>
-                <Button block style={{margin: 10}}>
+                <Button block style={{margin: 10}} onPress={() => Actions.workerList()}>
                   <Text>Đăng nhập</Text>
                 </Button>
               </Body>
